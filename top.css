@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row-reverse; */
+}
+
+.header {
+  height: 100px;
+  /* background-color: lightcyan; */
+  background: linear-gradient(#afafaf, #ffffff);
+  background: -moz-linear-gradient(#afafaf, #ffffff);
+  background: -webkit-linear-gradient(#afafaf, #ffffff);
+  box-sizing: border-box;
+  border: 3px solid rgb(0, 0, 0);
+  /* フォント指定 */
+  font-family: "Noto Sans Japaneze";
+  /* 行の高さの指定 */
+  line-height: 6em;
+  /* 文字の位置指定 */
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 200px;
+  /* background-color: moccasin; */
+  background: linear-gradient(#ffffff, #afafaf);
+  background: -moz-linear-gradient(#ffffff, #afafaf);
+  background: -webkit-linear-gradient(#ffffff, #afafaf);
+  box-sizing: border-box;
+  border: 3px solid rgb(0, 0, 0);
+
+}
+
+/* サイドバーの文字装飾 */
+.span-text-shadow {
+  font-size: 18px;
+  /* サイドバーの文字影 */
+  text-shadow: 3px 3px 2px #777777;
+}
+
+.span-title-shadow {
+  font-size: 25px;
+  /* サイドバーの文字影 */
+  text-shadow: 3px 3px 2px #777777;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flex-content {
+  flex-grow: 1;
+  /* background-color: palegoldenrod; */
+  background: linear-gradient(#ffffff, #afafaf);
+  background: -moz-linear-gradient(#ffffff, #afafaf);
+  background: -webkit-linear-gradient(#ffffff, #afafaf);
+  box-sizing: border-box;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.fixed-content {
+  height: 128px;
+  background-color: thistle;
+  box-sizing: border-box;
+  border: 3px solid darkmagenta;
+}
+
+/* ------------------------------------------- */
+
+/* ▼タブ */
+#tabcontrol a {
+  display: inline-block;
+  /* インラインブロック化 */
+  border-width: 1px 1px 0px 1px;
+  /* 下以外の枠線を引く */
+  border-style: solid;
+  /* 枠線の種類：実線 */
+  border-color: black;
+  /* 枠線の色：黒色 */
+  border-radius: 0.75em 0.75em 0 0;
+  /* 枠線の左上角と右上角だけを丸く */
+  padding: 0.75em 1em;
+  /* 内側の余白 */
+  text-decoration: none;
+  /* リンクの下線を消す */
+  color: black;
+  /* 文字色：黒色 */
+  background-color: white;
+  /* 背景色：白色 */
+  font-weight: bold;
+  /* 太字 */
+  position: relative;
+  /* JavaScriptでz-indexを調整するために必要 */
+}
+
+/* ▼タブにマウスポインタが載った際(任意) */
+#tabcontrol a:hover {
+  text-decoration: underline;
+  /* 文字に下線を引く */
+}
+
+/* ▼タブの中身 */
+#tabbody div {
+  border: 1px solid black;
+  /* 枠線：黒色の実線を1pxの太さで引く */
+  margin-top: -1px;
+  /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
+  padding: 0;
+  /* 内側の余白量 */
+  background-color: white;
+  /* 背景色：白色 */
+  position: relative;
+  /* z-indexを調整するために必要 */
+  z-index: 0;
+  /* 重なり順序を「最も背面」にするため */
+  height: 600px;
+}
+
+/* ▼タブの配色 */
+#tabcontrol a:nth-child(1),
+#tabbody div:nth-child(1) {
+  background-color: #ffffdd;
+}
+
+/* 1つ目のタブとその中身用の配色 */
+#tabcontrol a:nth-child(2),
+#tabbody div:nth-child(2) {
+  background-color: #ddffdd;
+}
+
+/* 2つ目のタブとその中身用の配色 */
+#tabcontrol a:nth-child(3),
+#tabbody div:nth-child(3) {
+  background-color: #ddddff;
+}
+
+/* 3つ目のタブとその中身用の配色 */

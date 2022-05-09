@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>トップランナープログラミング言語</title>
+  <meta charset="UTF-8" />
+  <link href="top.css" rel="stylesheet" />
+</head>
+<article>
+  <div class="app">
+
+    <!-- header部分 -->
+    <div class="header">
+      <span class="span-title-shadow";>
+        トップランナープログラミング言語 Topページ
+      </span>
+    </div>
+
+    <!-- メイン -->
+    <div class="main">
+
+      <!-- サイドバー -->
+      <div class="sidebar">
+        <span class="span-text-shadow">
+        <a style="position: absolute; left:10px" href="">Top</a>
+        <br>
+        <a style="position: absolute; left:20px" href="javascript_intro/javascript.html">Javascript</a>
+        <br>
+        <a style="position: absolute; left:20px" href="python_intro/python.html">Python</a>
+        <br>
+        <a style="position: absolute; left:20px" href="">Swift</a>
+        </span>
+      </div>
+
+      <!-- メインコンテンツ -->
+      <div class="content">
+        <div class="flex-content">
+          <p id="tabcontrol">
+            <a href="#tabpage1">普及しているプログラミング言語ランキング</a>
+            <a href="#tabpage2">年表</a>
+            <a href="#tabpage3">カオスマップ</a>
+          </p>
+          <div id="tabbody">
+            <div id="tabpage1">
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+              <style>
+                #ex_chart {
+                  max-width: 880px;
+                  max-height: 480px;
+                }
+              </style>
+              <canvas id="ex_chart"></canvas>
+              <script>
+                let ctx = document.getElementById('ex_chart');
+
+                let data = {
+                  labels: ["Python", "Java", "JavaScript", "C", "C++", "C#", "Go", "TypeScript", "PHP", "Ruby", "Kotlin", "R", "VBA", "Swift", "Rust", "SQL", "WebAssembly", "Scala", "HTML/CSS", "Dart"],
+                  datasets: [{
+                    label: 'pypl,TIOBE,Github-indexの総合評価',
+                    data: [21, 13, 9, 6, 6, 5, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1],
+                    backgroundColor: 'rgba(255, 100, 100, 1)'
+                  }]
+                };
+
+                let options = {
+                  indexAxis: 'y',
+                  scales: {
+                    xAxes: [{
+                      ticks: {
+                        min: 300,
+                      }
+                    }]
+                  }
+                };
+                let ex_chart = new Chart(ctx, {
+                  type: 'bar',
+                  data: data,
+                  options: options
+                });
+              </script>
+            </div>
+
+            <!-- tab2 -->
+            <div id="tabpage2">
+              <img src="top_image/programming-language-kind-tree-min.png" alt="プログラミング言語" title="プログラミング言語一覧">
+            </div>
+            
+            <!-- tab3 -->
+            <div id="tabpage3">
+              <img src="top_image/chaos-maps.png" alt="プログラミング言語" title="プログラミング言語一覧">
+            </div>
+          </div>
+         
+          <!-- Javascriptファイルの読み込み -->
+          <script src="top.js"></script>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="fixed-content">コンテンツ2予定</div> -->
+  </div>
+</article>
+</html>
