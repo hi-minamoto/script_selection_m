@@ -1,3 +1,4 @@
+/* html装飾------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +9,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* flex-direction: row-reverse; */
 }
 
 .header {
   height: 100px;
-  /* background-color: lightcyan; */
   background: linear-gradient(#afafaf, #ffffff);
   background: -moz-linear-gradient(#afafaf, #ffffff);
   background: -webkit-linear-gradient(#afafaf, #ffffff);
@@ -35,7 +34,6 @@
 
 .sidebar {
   width: 200px;
-  /* background-color: moccasin; */
   background: linear-gradient(#ffffff, #afafaf);
   background: -moz-linear-gradient(#ffffff, #afafaf);
   background: -webkit-linear-gradient(#ffffff, #afafaf);
@@ -65,7 +63,6 @@
 
 .flex-content {
   flex-grow: 1;
-  /* background-color: palegoldenrod; */
   background: linear-gradient(#ffffff, #afafaf);
   background: -moz-linear-gradient(#ffffff, #afafaf);
   background: -webkit-linear-gradient(#ffffff, #afafaf);
@@ -80,9 +77,9 @@
   border: 3px solid darkmagenta;
 }
 
-/* ------------------------------------------- */
+/* タブの装飾------------------------------------------- */
 
-/* ▼タブ */
+/* タブ */
 #tabcontrol a {
   display: inline-block;
   /* インラインブロック化 */
@@ -108,13 +105,13 @@
   /* JavaScriptでz-indexを調整するために必要 */
 }
 
-/* ▼タブにマウスポインタが載った際(任意) */
+/* タブにマウスポインタが載った際(任意) */
 #tabcontrol a:hover {
   text-decoration: underline;
   /* 文字に下線を引く */
 }
 
-/* ▼タブの中身 */
+/* タブの中身 */
 #tabbody div {
   border: 1px solid black;
   /* 枠線：黒色の実線を1pxの太さで引く */
@@ -131,22 +128,22 @@
   height: 600px;
 }
 
-/* ▼タブの配色 */
+/* タブの配色 */
+/* 1つ目のタブとその中身用の配色 */
 #tabcontrol a:nth-child(1),
 #tabbody div:nth-child(1) {
   background-color: #ffffdd;
 }
 
-/* 1つ目のタブとその中身用の配色 */
+/* 2つ目のタブとその中身用の配色 */
 #tabcontrol a:nth-child(2),
 #tabbody div:nth-child(2) {
   background-color: #ddffdd;
 }
 
-/* 2つ目のタブとその中身用の配色 */
+/* 3つ目のタブとその中身用の配色 */
 #tabcontrol a:nth-child(3),
 #tabbody div:nth-child(3) {
   background-color: #ddddff;
 }
 
-/* 3つ目のタブとその中身用の配色 */
