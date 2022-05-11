@@ -18,9 +18,9 @@
   /* 背景色単色*/
   /* background-color: rgb(255, 255, 255); */
   /* 背景色グラデーション */
-  background: linear-gradient(to right, #FFA8A8, #FCFF00);
-  background: -moz-linear-gradient(left, #FFA8A8, #FCFF00);
-  background: -webkit-linear-gradient(left, #FFA8A8, #FCFF00);
+  background: linear-gradient(to right, #fffb00, #9dff00);
+  background: -moz-linear-gradient(left, #fffb00, #9dff00);
+  background: -webkit-linear-gradient(left, #fffb00, #9dff00);
   /* 初期値　paddingとborderを幅(width)と高さ(height)に含める */
   box-sizing: border-box;
   /* 外枠　solidは直線 */
@@ -41,9 +41,9 @@
 
 .sidebar {
   width: 200px;
-  background: linear-gradient(to right, #FFA8A8, #FCFF00);
-  background: -moz-linear-gradient(left, #FFA8A8, #FCFF00);
-  background: -webkit-linear-gradient(left, #FFA8A8, #FCFF00);
+  background: linear-gradient(to right, #fffb00, #9dff00);
+  background: -moz-linear-gradient(left, #fffb00, #9dff00);
+  background: -webkit-linear-gradient(left, #fffb00, #9dff00);
   box-sizing: border-box;
   border: 3px solid rgb(0, 0, 0);
 }
@@ -69,9 +69,9 @@
 
 .flex-content {
   flex-grow: 1;
-  background: linear-gradient(to right, #FFA8A8, #FCFF00);
-  background: -moz-linear-gradient(left, #FFA8A8, #FCFF00);
-  background: -webkit-linear-gradient(left, #FFA8A8, #FCFF00);
+  background: linear-gradient(to right, #fffb00, #9dff00);
+  background: -moz-linear-gradient(left, #fffb00, #9dff00);
+  background: -webkit-linear-gradient(left, #fffb00, #9dff00);
   box-sizing: border-box;
   border: 3px solid rgb(0, 0, 0);
 }
